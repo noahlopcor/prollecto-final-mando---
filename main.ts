@@ -1,14 +1,7 @@
 input.onButtonPressed(Button.A, function () {
-    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 30)
-    basic.showLeds(`
-        . . # . .
-        . # # # .
-        # # # # #
-        . . # . .
-        . . # . .
-        `)
+    radio.sendNumber(1)
 })
-music.playMelody("C5 B A G F E D C ", 120)
-basic.forever(function () {
-    radio.setGroup(1)
+input.onButtonPressed(Button.B, function () {
+    radio.sendNumber(2)
 })
+radio.setGroup(5)
